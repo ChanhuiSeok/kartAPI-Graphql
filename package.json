@@ -1,0 +1,12 @@
+{
+  "name": "kart_app",
+  "version": "1.0.0",
+  "description": "Kart API with Graphql",
+  "main": "index.js",
+  "repository": "https://github.com/ChanhuiSeok/gql_server.git",
+  "author": "ChanhuiSeok",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
