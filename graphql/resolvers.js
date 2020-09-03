@@ -1,8 +1,8 @@
-import { getUser } from "./db";
+import { getUserId } from "./db";
 
 const resolvers = {
   Query:{
-    users: (_, {usrName}) => getUser(usrName)
+    user: (_, {usrName}) => getUserId(usrName)
   }
 }
 
