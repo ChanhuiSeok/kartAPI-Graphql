@@ -3,6 +3,46 @@ type User{
   name: String!
 }
 
+type Player{
+  kart: String
+  license: String
+  pet: String
+  flyingPet: String
+  partsEngine: String
+  partsHandle: String
+  partsWheel: String
+  partsKit: String
+  matchRank: String
+  matchWin: String
+  matchTime: String
+  matchRetired: String
+  rankinggrade2: String
+}
+
+
+type MatchDetail{
+  accountNo: String
+  matchId: String
+  matchType: String
+  teamId: String
+  character: String
+  startTime: Date
+  endTime: Date
+  playTime: Int
+  channelName: String
+  trackId: String
+  playerCount: Int
+  player: Player
+}
+
+type Match{
+  matchType: String
+  matches: [MatchDetail]
+}
+
+scalar Date
+
 type Query{
   user(usrName: String!): User!
+  matches(usrId: String!): [Match]
 }
