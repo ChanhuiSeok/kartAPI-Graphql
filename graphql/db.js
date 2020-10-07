@@ -17,7 +17,7 @@ export const getUserId = (usrName) => {
 };
 
 export const getMatch = (usrId) => {
-  let REQUEST_MATCH_INFO_URL = MATCH_INFO_URL + usrId + "/matches";
+  let REQUEST_MATCH_INFO_URL = MATCH_INFO_URL + usrId + "/matches?limit=200";
   return fetch(REQUEST_MATCH_INFO_URL, {
     method: 'get',
     headers:{
