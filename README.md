@@ -23,3 +23,5 @@ $ yarn start
 
 ------
 
+### 📖 편하게 사용하실 수 있도록 heroku에 해당 서버를 deploy 하였습니다.
+주소 : https://kartinfoapi.herokuapp.com/
