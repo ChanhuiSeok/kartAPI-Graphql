@@ -38,9 +38,7 @@ export const getMatchMemberByIndi = (matchId) => {
     },
   })
     .then((res) => res.json())
-    .then((json) => {
-      return json.players;
-    });
+    .then((json) => json.players);
 };
 
 export const getMatchMemberByTeam = (matchId) => {
@@ -52,7 +50,5 @@ export const getMatchMemberByTeam = (matchId) => {
     },
   })
     .then((res) => res.json())
-    .then((json) => {
-      return json.teams;
-    });
+    .then((json) => json.teams);
 };
