@@ -1,9 +1,9 @@
-type User{
+type User {
   accessId: String!
   name: String!
 }
 
-type Player{
+type Player {
   kart: String
   license: String
   pet: String
@@ -19,8 +19,16 @@ type Player{
   rankinggrade2: String
 }
 
+type DetailedPlayer {
+  accountNo: String
+  characterName: String
+  character: String
+  kart: String
+  matchRank: String
+  matchTime: String
+}
 
-type MatchDetail{
+type MatchDetail {
   accountNo: String
   matchId: String
   matchType: String
@@ -35,14 +43,21 @@ type MatchDetail{
   player: Player
 }
 
-type Match{
+type Match {
   matchType: String
   matches: [MatchDetail]
 }
 
 scalar Date
 
-type Query{
+type Teams {
+  teamId: String
+  players: [DetailedPlayer]
+}
+
+type Query {
   user(usrName: String!): User!
   matches(usrId: String!): [Match]
+  matchTeamMember(matchId: String!): [Teams]
+  matchIndiMember(matchId: String!): [DetailedPlayer]
 }
